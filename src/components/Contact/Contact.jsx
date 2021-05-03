@@ -17,7 +17,7 @@ const Contact = props => {
   return (
     <React.Fragment >
       <Helmet >
-        Contact
+        <title>Contact</title>
       </Helmet>
       
 
