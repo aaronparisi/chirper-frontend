@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'
 
 function About() {
   return (
     <React.Fragment >
+      <Helmet >
+        <title>About Chirper</title>
+      </Helmet>
       <h1>About</h1>
 
       <p>
