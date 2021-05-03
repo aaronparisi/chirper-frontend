@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 
-function About() {
+const About = props => {
   return (
     <React.Fragment >
       <Helmet >
-        <title>About Chirper</title>
+        <title>About</title>
       </Helmet>
       <h1>About</h1>
 

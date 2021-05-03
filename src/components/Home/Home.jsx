@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home() {
+const Home = props => {
   return (
     <React.Fragment >
       <h1>Chirper</h1>
