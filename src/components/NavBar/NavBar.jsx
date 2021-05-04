@@ -2,18 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const NavBar = props => {
+  const handleLogout = e => {
+    e.preventDefault()
+
+    props.logout()
+  }
 
   const SessionLinks = () => {
-    if (props.currentUser !== undefined) {
+    // debugger
+    if (props.currentUser !== null) {
       return (
         <React.Fragment >
           <li className="nav-link">
-            <button onClick={() => console.log('logout clicked')}>
+            <button onClick={e => handleLogout(e)}>
               Logout
             </button>
           </li>
           <li className="nav-link">
-            <Link to={`/users/${props.currentUser.id}`} >Profile</Link>
+            <Link to={`/users/${props.currentUser.id}`} >{props.currentUser.email}'s Profile</Link>
           </li>
         </React.Fragment>
       )

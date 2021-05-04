@@ -28,7 +28,9 @@ export const createNewUser = formUser => dispatch => {
     err => {
       return Promise.reject(err)
     }
-  )
+  ).then(() => {
+    history.push('/')
+  })
 }
 
 export const login = formUser => dispatch => {
@@ -39,7 +41,7 @@ export const login = formUser => dispatch => {
     }
   )
   .then(() => {
-    // history.push('/listings')
+    history.push('/')
   })
 }
 

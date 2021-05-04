@@ -8,10 +8,12 @@ const Login = props =>  {
   const handleSubmit = e => {
     e.preventDefault()
 
-    // ! this needs adjusting???
-    // props.login(state)
+    const toLogin = {
+      email: email,
+      password: password
+    }
 
-    console.log('login form submitted!')
+    props.login(toLogin)
   }
 
   

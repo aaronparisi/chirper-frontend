@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    curUser: state.currentUser
+    currentUser: state.session.currentUser
   }
 }
 

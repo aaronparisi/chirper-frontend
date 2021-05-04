@@ -34,7 +34,6 @@ export const postSession = user => {
 
 // log out a user (delete a session)
 export const deleteSession = () => {
-  console.log('about to make axiosIns delete request')
   return axiosIns({
     method: 'delete',
     url: '/api/session'

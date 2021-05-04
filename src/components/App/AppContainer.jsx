@@ -1,16 +1,17 @@
 import { connect } from 'react-redux'
+import { fetchCurrentUser } from '../../actions/session_actions'
 import App from './App'
 // import { fetchCurrentUser } from '../../actions/session_actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-
+    currentUser: state.session.currentUser
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    
+    fetchCurrentUser: () => dispatch(fetchCurrentUser())
   }
 }
 

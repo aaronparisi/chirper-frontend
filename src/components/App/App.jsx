@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom'
 import HomeContainer from '../Home/HomeContainer';
 import HelpContainer from '../Help/HelpContainer';
@@ -10,7 +10,12 @@ import LoginContainer from '../Session/LoginContainer'
 
 import { Helmet } from 'react-helmet'
 
-function App() {
+const App = ({ fetchCurrentUser }) => {
+
+  useEffect(() => {
+    fetchCurrentUser()
+  }, [fetchCurrentUser])
+
   return (
     <React.Fragment >
       <Helmet
