@@ -4,9 +4,11 @@ import HomeContainer from '../Home/HomeContainer';
 import HelpContainer from '../Help/HelpContainer';
 import AboutContainer from '../About/AboutContainer';
 import NavBarContainer from '../NavBar/NavBarContainer';
+import ContactContainer from '../Contact/ContactContainer';
+import SignupContainer from '../Session/SignupContainer'
+import LoginContainer from '../Session/LoginContainer'
 
 import { Helmet } from 'react-helmet'
-import ContactContainer from '../Contact/ContactContainer';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Route exact path="/help" component={HelpContainer} />
       <Route exact path="/about" component={AboutContainer} />
       <Route exact path="/contact" component={ContactContainer} />
+      <Route exact path="/signup" component={SignupContainer} />
+      <Route exact path="/login" component={LoginContainer} />
     </React.Fragment>
   );
 }

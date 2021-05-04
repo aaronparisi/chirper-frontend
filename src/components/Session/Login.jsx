@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { routerActions } from 'react-router-redux'
 
 const Login = props =>  {
 
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("parisi.aaron@gmail.com")
+  const [password, setPassword] = useState("password")
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -18,7 +17,6 @@ const Login = props =>  {
   
   return (
     <div className="app-form login-form">
-      <img className="form-title" src={loginText} alt="login"/>
       <form
         onSubmit={e => handleSubmit(e)}
       >
@@ -34,7 +32,7 @@ const Login = props =>  {
           type="password"
           value={password}
           id="password"
-          placeholder="password"
+          placeholder="Password"
           onChange={e => setPassword(e.currentTarget.value)}
         />
 

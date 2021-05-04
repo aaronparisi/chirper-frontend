@@ -44,11 +44,9 @@ export const login = formUser => dispatch => {
 }
 
 export const logout = () => dispatch => {
-  console.log('about to log out')
   return sessionApiUtil.deleteSession()
   .then(
-    logoutMsg => {  // does the msg from sessions controller even get returned?
-      console.log(`returned from delete api call with message: ${logoutMsg}`)
+    logoutMsg => {
       dispatch(logoutCurrentUser())
       history.push('/login')
       return null
